@@ -14,6 +14,11 @@ def append_func(a, alist=[]):
     return alist
 
 
+def make_incrementor(n):
+    """Returns lamda expression"""
+    return lambda x: x + n
+
+
 def main():
     a_func = produce_func("configuration for a_func")
     a_func("arg to a_func")
@@ -27,6 +32,9 @@ def main():
 
     print("my_list1 == my_list2 == my_list3 is ",
           my_list1 == my_list2 == my_list3)
+
+    increment_by_two = make_incrementor(2)
+    print("3 incremented by 2 is ", increment_by_two(3))
 
 
 if __name__ == '__main__':
